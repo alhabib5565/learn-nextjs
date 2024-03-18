@@ -21,7 +21,6 @@ const links = [
 ];
 const SidebarItems = () => {
   const pathName = usePathname();
-  console.log(pathName, "sdfsfs");
   return (
     <div className="flex lg:flex-col gap-2">
       {links.map((link) => (
@@ -30,7 +29,7 @@ const SidebarItems = () => {
           href={link.href}
           title={link.name}
           className={clsx(
-            "flex items-center justify-center lg:justify-start gap-2 p-2 rounded-md hover:bg-blue-600/15 hover:text-blue-600 transition-colors duration-150 w-full",
+            "flex items-center justify-center lg:justify-start gap-2 p-2 rounded-md hover:bg-blue-600/15 hover:text-blue-600 transition-colors duration-150 w-full bg-slate-100",
             { "bg-blue-600/15 text-blue-600": pathName === link.href }
           )}
         >
